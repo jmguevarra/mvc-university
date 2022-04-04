@@ -32,6 +32,8 @@ namespace MvcUniversity.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddStudent(Student obj) {
 
+            if ( !ModelState.IsValid ) { return View(obj); } //return if not valid
+
             _db.Student.Add(obj);
             _db.SaveChanges();
             return RedirectToAction("Index");

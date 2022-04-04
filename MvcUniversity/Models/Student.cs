@@ -16,15 +16,19 @@ namespace MvcUniversity.Models
         public string StudLRN { get; set; }
         
         [DisplayName("Full Name")]
+        [Required]
         public string FullName { get; set; }
 
         [DisplayName("Course")]
+        [Required]
         public string StudCourse { get; set; }
 
         [DisplayName("Year")]
+        [Required]
         public int StudYear { get; set; }
 
         [DisplayName("Section")]
+        [Required]
         public string StudSection { get; set; }
 
     }
