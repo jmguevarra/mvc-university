@@ -1,0 +1,65 @@
+﻿@model MvcUniversity.Models.Student;
+
+<form method="post" asp-action="AddStudent">
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info pl-3">
+                Add Student
+            </h2>
+        </div>
+        <div class="form_fields">
+            <div class="row form-group fgr-field">
+                <div class="col-4">
+                    <label asp-for="StudLRN">Studen LRN</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" asp-for="StudLRN" class="form-control" />
+                </div>
+            </div>
+            <div class="row form-group fgr-field">
+                <div class="col-4">
+                    <label asp-for="FullName">Fullname</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" asp-for="FullName" class="form-control" />
+                </div>
+            </div>
+            <div class="row form-group fgr-field">
+                <div class="col-4">
+                    <label asp-for="StudCourse">Course</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" asp-for="StudCourse" class="form-control" />
+                </div>
+            </div>
+            <div class="row form-group fgr-field">
+                <div class="col-4">
+                    <label asp-for="StudYear">Year</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" asp-for="StudYear" class="form-control" />
+                </div>
+            </div>
+            <div class="row form-group fgr-field">
+                <div class="col-4">
+                    <label asp-for="StudSection">Section</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" asp-for="StudSection" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="form-footer">
+            <div class="form-group row">
+                <div class="col-8 offset-4 row">
+                    <div class="col pl-0">
+                        <input type="submit" name="add-student" class="btn btn-info w-100" value="Add Student" />
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-primary" asp-action="Index">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

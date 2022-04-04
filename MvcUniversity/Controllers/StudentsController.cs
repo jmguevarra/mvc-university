@@ -22,5 +22,19 @@ namespace MvcUniversity.Controllers
             IEnumerable<Student> objStudent = _db.Student;
             return View(objStudent);
         }
+
+        public IActionResult AddStudent() {
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddStudent(Student obj) {
+
+            _db.Student.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
