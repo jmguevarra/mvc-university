@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MvcUniversity.Models.Student>
+
+<div class="category-wrapper">
+    <div class="container">
+        <div class="row py-2">
+            <div class="col-6">
+                <h2 class="text-primary">Student List</h2>
+            </div>
+            <div class="col-6">
+                <a class="btn btn-primary" href="#">
+                   Add New Student
+                </a>
+            </div>
+        </div>
+        @if (Model.Count() > 0)
+        {
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>LRN</th>
+                        <th>Fullname</th>
+                        <th>Course</th>
+                        <th>Year</th>
+                        <th>Section</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var studObj in Model)
+                    {
+                    <tr>
+                        <td width="25%">@studObj.StudLRN</td>
+                        <td width="25%">@studObj.FullName</td>
+                        <td width="25%">@studObj.StudCourse</td>
+                        <td width="25%">@studObj.StudYear</td>
+                        <td width="25%">@studObj.StudSection</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No category found</p>
+        }
+    </div>
+</div>
