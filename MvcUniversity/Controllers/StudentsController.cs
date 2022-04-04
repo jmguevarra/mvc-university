@@ -24,6 +24,8 @@ namespace MvcUniversity.Controllers
         }
 
         public IActionResult AddStudent() {
+            IEnumerable<Student> objStudents = _db.Student;
+            ViewBag.studLRN = Int64.Parse(objStudents.Last().StudLRN) + 1;
 
             return View();
         }
