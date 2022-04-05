@@ -1,12 +1,11 @@
 ﻿@model MvcUniversity.Models.Student;
 
 
-<form method="post" asp-action="AddStudent">
+<form method="post" asp-action="DeleteStudent">
     <div class="border p-3">
-        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
         <div class="form-group row">
             <h2 class="text-info pl-3">
-                Add Student
+                Delete Student
             </h2>
         </div>
         <div class="form_fields">
@@ -15,7 +14,7 @@
                     <label asp-for="StudLRN">Studen LRN</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" asp-for="StudLRN" class="form-control" value="@ViewBag.studLRN" readonly />
+                    <input type="text" asp-for="StudLRN" class="form-control" readonly />
                 </div>
             </div>
             <div class="row form-group fgr-field">
@@ -23,7 +22,7 @@
                     <label asp-for="FullName">Fullname</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" asp-for="FullName" class="form-control" />
+                    <input type="text" asp-for="FullName" class="form-control" readonly/>
                     <span class="text-danger" asp-validation-for="FullName"></span>
                 </div>
             </div>
@@ -32,7 +31,7 @@
                     <label asp-for="StudCourse">Course</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" asp-for="StudCourse" class="form-control" />
+                    <input type="text" asp-for="StudCourse" class="form-control" readonly/>
                     <span class="text-danger" asp-validation-for="StudCourse"></span>
                 </div>
             </div>
@@ -41,7 +40,7 @@
                     <label asp-for="StudYear">Year</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" asp-for="StudYear" class="form-control" />
+                    <input type="text" asp-for="StudYear" class="form-control" readonly/>
                     <span class="text-danger" asp-validation-for="StudYear"></span>
                 </div>
             </div>
@@ -50,16 +49,17 @@
                     <label asp-for="StudSection">Section</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" asp-for="StudSection" class="form-control" />
+                    <input type="text" asp-for="StudSection" class="form-control" readonly/>
                     <span class="text-danger" asp-validation-for="StudSection"></span>
                 </div>
             </div>
+            <input asp-for="id" hidden />
         </div>
         <div class="form-footer">
             <div class="form-group row">
                 <div class="col-8 offset-4 row">
                     <div class="col pl-0">
-                        <input type="submit" name="add-student" class="btn btn-info w-100" value="Add Student" />
+                        <input type="submit" name="add-student" class="btn btn-danger w-100" value="Delete Student" />
                     </div>
                     <div class="col">
                         <a class="btn btn-primary" asp-action="Index">Back</a>
@@ -72,7 +72,6 @@
 
 
 @section Scripts{ <!-- adding Javascript -->
-
     <!--  include _ValidationScriptsPartial for client validation -->
     @{
         <partial name="_ValidationScriptsPartial" />

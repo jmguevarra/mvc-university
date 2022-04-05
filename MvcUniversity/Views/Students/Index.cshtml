@@ -22,17 +22,24 @@
                         <th>Course</th>
                         <th>Year</th>
                         <th>Section</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var studObj in Model)
                     {
                     <tr>
-                        <td width="25%">@studObj.StudLRN</td>
-                        <td width="25%">@studObj.FullName</td>
-                        <td width="25%">@studObj.StudCourse</td>
-                        <td width="25%">@studObj.StudYear</td>
-                        <td width="25%">@studObj.StudSection</td>
+                        <td width="10%">@studObj.StudLRN</td>
+                        <td width="40%">@studObj.FullName</td>
+                        <td width="10%">@studObj.StudCourse</td>
+                        <td width="10%">@studObj.StudYear</td>
+                        <td width="10%">@studObj.StudSection</td>
+                        <td width="20%" class="text-center">
+                            <div class="btn-group" role="group">
+                            <a class="btn btn-info mx-1" asp-route-id="@studObj.id" asp-controller="Students" asp-action="Edit">Edit</a>
+                            <a class="btn btn-danger mx-1" asp-route-id="@studObj.id" asp-controller="Students" asp-action="Delete">Delete</a>
+                            </div>
+                        </td>
                     </tr>
                     }
                 </tbody>
