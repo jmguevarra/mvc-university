@@ -8,7 +8,7 @@
             </div>
             <div class="col-6">
                 <a class="btn btn-primary" asp-controller="Students" asp-action="AddStudent">
-                   Add New Student
+                    <i class="fa-solid fa-plus"></i> Add New Student
                 </a>
             </div>
         </div>
@@ -36,8 +36,8 @@
                         <td width="10%">@studObj.StudSection</td>
                         <td width="20%" class="text-center">
                             <div class="btn-group" role="group">
-                            <a class="btn btn-info mx-1" asp-route-id="@studObj.id" asp-controller="Students" asp-action="Edit">Edit</a>
-                            <a class="btn btn-danger mx-1" asp-route-id="@studObj.id" asp-controller="Students" asp-action="Delete">Delete</a>
+                            <a class="btn btn-info mx-1" asp-route-id="@studObj.id" asp-controller="Students" asp-action="Edit"><i class="fa-solid fa-pen"></i></a>
+                            <a class="btn btn-danger mx-1" asp-route-id="@studObj.id" asp-controller="Students" asp-action="Delete"><i class="fa-solid fa-trash"></i></a>
                             </div>
                         </td>
                     </tr>
