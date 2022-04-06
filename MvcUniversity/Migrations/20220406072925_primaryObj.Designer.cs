@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcUniversity.Data;
 
 namespace MvcUniversity.Migrations
 {
     [DbContext(typeof(MvcUniversityDbContext))]
-    partial class MvcUniversityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220406072925_primaryObj")]
+    partial class primaryObj
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -16,5 +16,7 @@ namespace MvcUniversity.Data
         }
 
         public DbSet<Student> Student { get; set; }
+
+        public DbSet<Teacher> Teacher { get; set; }
     }
 }
